@@ -67,6 +67,7 @@ let education = ['David',...team1,...team2];
 console.log(education);
 //--------------------------------------------------------------------------++
 //Let y const:
+//Let
 var hola = 'hola';///en el scope global
 let hola = 'hola';/// va a estar solo en el scope local
 
@@ -79,4 +80,9 @@ let hola = 'hola';/// va a estar solo en el scope local
 }
 console.log(globalVar);
 console.log(globalLet);
+//global Let solo se muestra en su propio bloque de codigo, se muestra en el scope local
+//--
+//const
+const a ='b'
+//No puedo reasignar su valor porque es una constante
 //--------------------------------------------------------------------------++
