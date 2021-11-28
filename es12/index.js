@@ -30,8 +30,26 @@ const promise3 = new Promise((resolve,reject)=> resolve(3));
 
 Promise.any([promise1,promise2,promise3])
 		.then(response => console.log(response));
-//Devuelve el 2
+//Devuelve el valor 2
 //------------------------------------------------------------------------------------++
+//weakref:le permite mantener una referencia debil a otro objeto evitando que sea recogido por el garbage collector
+class anyClass{
+	constructor(element){
+		this.ref = new WeakRef(element);
+	}
+	{...}
+}
+//------------------------------------------------------------------------------------++
+//Nuevos operadores
+let isTrue = true;
+let isFalse = false;
+console.log(isTrue &&= isFalse);
+
+console.log(isTrue ||= isFalse);
+
+console.log(isTrue ??= isFalse);
+
+
 
 //------------------------------------------------------------------------------------++
 
